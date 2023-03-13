@@ -1,0 +1,187 @@
+@import "./fonts.scss";
+
+@mixin dotted-underline {
+  border-bottom: 1px dotted #ccc;
+}
+
+$dotted-borders: solid 1px #ccc;
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-body-light;
+}
+
+h1 {
+  font-family: $font-body-light;
+  font-size: 80px;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: $font-header-light;
+}
+
+#category {
+  font-family: $font-body-light;
+  font-weight: 500;
+}
+
+#title {
+  letter-spacing: 0.4px;
+  font-size: 18px;
+  font-size: 1.375rem;
+  line-height: 1.13636;
+}
+
+#banner {
+  margin: 20px;
+  height: 800px;
+}
+
+#editor {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+img:hover {
+  opacity: 1;
+  transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.not-found {
+  text-align: center;
+}
+
+.hero-title {
+  .title-header {
+    @include dotted-underline();
+    font-family: $font-logo;
+    cursor: pointer;
+  }
+}
+
+.nav-container {
+  border-top: $dotted-borders;
+  border-bottom: $dotted-borders;
+  color: $main-font-color;
+
+  .nav-link {
+    color: $main-font-color;
+  }
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.article-attr{
+  color: $main-font-color;
+  font-size: $link-font-size;
+  .attribute-val{
+    color: #aaa;
+  }
+}
+
+.continue-read {
+
+  a {
+    font-size: $link-font-size;
+    border-bottom: dotted 0.5px #ccc;
+    color: $main-font-color;
+  }
+
+  .continue-reading-link{
+    color: $main-font-color !important;
+  }
+}
+
+.dotted-y-borders {
+  border-bottom: $dotted-borders;
+  border-top: $dotted-borders;
+}
+
+.blog-title {
+  h1 {
+    font-size: 5em;
+  }
+}
+
+.nav-blog-item{
+  color: $main-font-color;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  .nav-label {
+    color: $secondary-font-color;
+  }
+
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.next-blog{
+  text-align: right;
+}
+
+.previous-blog{
+  text-align: left;
+}
+
+.newsletter-section{
+  background-color: $hover-color;
+
+  .newsletter-header {
+    .header-text {
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  .newsletter-form{
+    input {
+      border: none;
+    }
+    button {
+      background: $secondary-font-color;
+      color: #fff;
+    }
+  }
+}
+
+// media-queries
+
+@media screen and (max-width: 480px) {
+  .hero-subtitle{
+    padding-bottom: 0 !important;
+  }
+
+  .blog-title h1{
+    font-size: 45px;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .newsletter-form{
+    button {
+      margin-top: 5px;
+    }
+  }
+
+  .nav-blog-item{
+    background-color: $hover-color;
+    margin-top: 5px;
+  }
+}
